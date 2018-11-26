@@ -26,6 +26,13 @@ PCT=0.1
 
 
 def classify(current, future):
+    """If future price is greater than current price*1.01 then returning a 1, otherwise return a 0.
+    >>> classify(10,20)
+    1
+    >>> classify(10,10.05)
+    0
+    """
+
     if float(future) > float(current)*1.01:  # if the future price is higher than the current by 1%, that's a buy, or a 1
         return 1
     else:  # otherwise... it's a 0!
